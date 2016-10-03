@@ -1,0 +1,12 @@
+name = "simpleblog"
+license = "Apache License 2.0"
+lincenselink = "https://github.com/ymotongpoo/simpleblog/LICENSE"
+description = "very simple blog template for hugo"
+homepage = "https://github.com/ymotongpoo/simpleblog"
+tags = ["blog"]
+features = ["html5", "css3"]
+min_version = 0.16
+
+[author]
+name = "Yoshi Yamaguchi <@ymotongpoo>"
+homepage = "https://www.ymotongpoo.com"
