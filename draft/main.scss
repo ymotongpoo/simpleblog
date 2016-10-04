@@ -116,8 +116,13 @@ main#list {
         font-size: $list-entry-h1-size;
     }
 
-    .list-summary {
-        border: 0 0 1px 0 solid #777777;
+    .list-summary:not(:last-child) {
+        border-bottom: 1px solid #777777;
+    }
+
+    .list-meta {
+        color: $entry-meta-font-color;
+        margin-bottom: $base-margin;
     }
 }
 
