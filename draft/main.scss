@@ -20,6 +20,7 @@ $entry-section-color: #888888;
 $entry-title-font-family: "Open Sans Condensed", Helvetica, sans-serif;
 $entry-h1-size: 24px;
 $entry-h2-size: 18px;
+$list-entry-h1-size: 18px;
 $entry-meta-font-color: #bbbbbb;
 $timestamp-pseudo: "|";
 $tag-pseudo: ",";
@@ -70,25 +71,27 @@ footer {
     margin: auto;
 }
 
+span.timestamp::after {
+    content: $timestamp-pseudo;
+    margin: $entry-meta-margin;
+}
+
+span.tag:not(:last-child)::after {
+    content: $tag-pseudo;
+}
+
 main {
     max-width: $main-width;
     margin: auto;
+}
 
+main#index {
     article {
         padding: $base-padding;
         width: 100%;
         
         .entry-meta {
             color: $entry-meta-font-color;
-
-            span.timestamp::after {
-                content: $timestamp-pseudo;
-                margin: $entry-meta-margin;
-            }
-
-            span.tag:not(:last-child)::after {
-                content: $tag-pseudo;
-            }
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -104,6 +107,17 @@ main {
             color: $entry-section-color;
             font-size: $entry-h2-size; 
         }
+    }
+}
+
+main#list {
+    h1 {
+        color: $entry-title-color;
+        font-size: $list-entry-h1-size;
+    }
+
+    .list-summary {
+        border: 0 0 1px 0 solid #777777;
     }
 }
 
