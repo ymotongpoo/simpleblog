@@ -1,0 +1,45 @@
+$base-font-color: #515151;
+$base-font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, "VL PGothic", "Open Sans", Helvetica, sans-serif;
+$base-font-size: 16px;
+
+$header-font-family: "Open Sans Condensed", Helvetica, sans-serif;
+$header-bgcolor: #fafafa;
+$header-padding: 24px;
+
+$entry-title-color: #777777;
+$entry-section-color: #888888;
+
+$code-font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+$code-font-size: 14px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    color: $base-font-color;
+}
+
+pre, code, var, samp, kbd {
+    font-family: $code-font-family;
+    font-size: $code-font-size;
+}
+
+header {
+    font-family: $header-font-family;
+    background: $header-bgcolor;
+    padding: $header-padding;
+}
+
+main {
+    article {
+        h1 {
+            color: $entry-title-color;
+        }
+        h2 {
+            color: $entry-section-color; 
+        }
+    }
+}
