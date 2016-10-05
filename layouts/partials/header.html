@@ -3,6 +3,7 @@
 
 <head>
   <!-- Open Graph -->
+  {{ if .IsPage }}
   <meta charset="UTF-8">
   <meta property="og:title" content="{{ .Title }}" />
   <meta property="og:type" content="article" />
@@ -17,6 +18,23 @@
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta name="twitter:description" content="{{ .Summary }}" />
   <meta name="twitter:image" content="{{ .Site.Params.siteImage }}" />
+  {{ end }}
+  {{ if .IsNode }}
+  <meta charset="UTF-8">
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" contnet="{{ .Permalink }}" />
+  <meta property="og:image" content="{{ .Site.Params.siteImage }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta property="og:locale" content="ja_JP" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="{{ .Permalink }}" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.siteImage }}" />
+  {{ end }}
 
   <link rel="stylesheet" href="/css/main.css">
 
