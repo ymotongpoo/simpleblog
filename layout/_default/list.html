@@ -1,0 +1,13 @@
+  <main id="list">
+    {{ range .Data.Pages.ByPublishDate }}
+    <div class="list-summary">
+      <h1>{{ .Title }}</h1>
+      <div class="list-meta">
+        <span class="timestamp"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
+        {{ range .Keywords }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </main>

@@ -1,5 +1,13 @@
 {{ partial "header.html" . }}
-
-
-
+  <main id="index">
+    <article>
+      <h1>{{ .Title }}</h1>
+      <div class="entry-meta">
+        <span class="timestamp"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
+        {{ range .Keywords }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+    </article>
+  </main>
 {{ partial "footer.html" . }}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Open Graph -->
+  <meta charset="UTF-8">
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" contnet="{{ .Permalink }}" />
+  <meta property="og:image" content="https://example.com/foo.png" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Summary }}" />
+  <meta property="og:locale" content="ja_JP" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="{{ .Permalink }}" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Summary }}" />
+  <meta name="twitter:image" content="https://example.com/foo.png" />
+
+  <link rel="stylesheet" href="./main.css">
+
+  <title>{{ .Title }} | {{ .Site.Title }} </title>
+</head>
+
+<body>
+  <header>
+    <div id="branding">
+      <h1>{{ .Site.Title }}</h1>
+      <h2>{{ .Site.Params.description }}</h2>
+    </div>
+  </header>
