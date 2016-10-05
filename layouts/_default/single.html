@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ partial "header" . }}
   <main id="index">
     <article>
       <h1>{{ .Title }}</h1>
@@ -8,6 +8,7 @@
         <span class="tag">{{ . }}</span>
         {{ end }}
       </div>
+      {{ .Content }}
     </article>
   </main>
-{{ partial "footer.html" . }}
+{{ partial "footer" . }}
