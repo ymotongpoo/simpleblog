@@ -7,7 +7,7 @@
   <meta property="og:title" content="{{ .Title }}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" contnet="{{ .Permalink }}" />
-  <meta property="og:image" content="https://example.com/foo.png" />
+  <meta property="og:image" content="{{ .Site.Params.siteImage }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:description" content="{{ .Summary }}" />
   <meta property="og:locale" content="ja_JP" />
@@ -16,9 +16,9 @@
   <meta name="twitter:url" content="{{ .Permalink }}" />
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta name="twitter:description" content="{{ .Summary }}" />
-  <meta name="twitter:image" content="https://example.com/foo.png" />
+  <meta name="twitter:image" content="{{ .Site.Params.siteImage }}" />
 
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./css/main.css">
 
   <title>{{ .Title }} | {{ .Site.Title }} </title>
 </head>
