@@ -1,36 +1,5 @@
-$main-width: 900px;
-$header-width: 1280px;
-$header-height: 100px;
-$footer-width: 1280px;
-
-$base-font-color: #515151;
-$base-font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, "VL PGothic", "Open Sans", Helvetica, sans-serif;
-$base-font-size: 16px;
-$base-padding: 24px;
-$base-margin: 24px;
-
-$header-font-color: #f5f5f5;
-$header-font-family: "Open Sans Condensed", Helvetica, sans-serif;
-$header-title-size: 36px;
-$header-subtitle-size: 18px;
-$header-bgcolor: #0379C4;
-
-$entry-title-color: #777777;
-$entry-section-color: #888888;
-$entry-title-font-family: "Open Sans Condensed", Helvetica, sans-serif;
-$entry-h1-size: 24px;
-$entry-h2-size: 18px;
-$list-entry-h1-size: 18px;
-$entry-meta-font-color: #bbbbbb;
-$timestamp-pseudo: "|";
-$tag-pseudo: ",";
-$entry-meta-margin: 0 7px;
-
-$code-font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
-$code-font-size: 14px;
-
-$copyright-font-color: #bbbbbb;
-$copyright-font-size: 12px;
+@import "vars";
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 
 * {
     box-sizing: border-box;
@@ -40,6 +9,15 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $base-font-color;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: $anker-color;
+        }
+    }
 }
 
 pre, code, var, samp, kbd {
@@ -62,6 +40,10 @@ header {
         }
         h2 {
             font-size: $header-subtitle-size;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
         }
     }
 }

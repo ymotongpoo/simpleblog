@@ -5,7 +5,7 @@
       <div class="entry-meta">
         <span class="timestamp"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
         {{ range .Params.tags }}
-        <span class="tag">{{ . }}</span>
+        <span class="tag">#{{ . }}</span>
         {{ end }}
       </div>
       {{ .Content }}

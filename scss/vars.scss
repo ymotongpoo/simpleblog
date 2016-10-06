@@ -1,0 +1,46 @@
+/* color pallete */
+$dark-primary-color: #0288d1;
+$primary-color: #03a9f4;
+$light-primary-color: #b3e5fc;
+$text-color: #f5f5f5;
+$accent-color: #00bcd4;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #bdbdbd;
+
+/* layout */
+$main-width: 900px;
+$header-width: 1280px;
+$header-height: 100px;
+$footer-width: 1280px;
+
+$base-font-color: $primary-text-color;
+$base-font-family: "Noto Sans Japanese", "Open Sans", Helvetica, sans-serif;
+$base-font-size: 16px;
+$base-padding: 24px;
+$base-margin: 24px;
+
+$anker-color: $accent-color;
+
+$header-font-color: $text-color;
+$header-font-family: "Open Sans Condensed", Helvetica, sans-serif;
+$header-title-size: 36px;
+$header-subtitle-size: 18px;
+$header-bgcolor: $primary-color;
+
+$entry-title-color: $secondary-text-color;
+$entry-section-color: $secondary-text-color;
+$entry-title-font-family: "Open Sans Condensed", Helvetica, sans-serif;
+$entry-h1-size: 24px;
+$entry-h2-size: 18px;
+$list-entry-h1-size: 18px;
+$entry-meta-font-color: $divider-color;
+$timestamp-pseudo: "|";
+$tag-pseudo: ",";
+$entry-meta-margin: 0 7px;
+
+$code-font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+$code-font-size: 14px;
+
+$copyright-font-color: $divider-color;
+$copyright-font-size: 12px;

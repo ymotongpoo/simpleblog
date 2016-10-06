@@ -2,11 +2,11 @@
   <main id="list">
     {{ range .Data.Pages.ByPublishDate }}
     <div class="list-summary">
-      <h1>{{ .Title }}</h1>
+      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       <div class="list-meta">
         <span class="timestamp"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
         {{ range .Params.tags }}
-        <span class="tag">{{ . }}</span>
+        <span class="tag"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span>
         {{ end }}
       </div>
     </div>

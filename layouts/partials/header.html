@@ -37,6 +37,9 @@
   {{ end }}
 
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/monokai-sublime.css">
+  <script src="/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
   <title>{{ .Title }} | {{ .Site.Title }} </title>
 </head>
@@ -44,7 +47,7 @@
 <body>
   <header>
     <div id="branding">
-      <h1>{{ .Site.Title }}</h1>
+      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
       <h2>{{ .Site.Params.description }}</h2>
     </div>
   </header>
