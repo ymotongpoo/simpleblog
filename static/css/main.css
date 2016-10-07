@@ -19,7 +19,7 @@ header {
   background: #03a9f4;
   padding: 24px; }
   header #branding {
-    max-width: 1280px;
+    max-width: 900px;
     height: 100px;
     margin: auto; }
     header #branding h1 {
@@ -32,7 +32,7 @@ header {
       text-decoration: none; }
 
 footer {
-  max-width: 1280px;
+  max-width: 900px;
   margin: auto; }
 
 span.timestamp::after {
