@@ -5,10 +5,16 @@
       <div class="entry-meta">
         <span class="timestamp"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
         {{ range .Params.tags }}
-        <span class="tag">#{{ . }}</span>
+        <span class="tag"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span>
         {{ end }}
       </div>
       {{ .Content }}
     </article>
   </main>
+  <nav>
+    {{ if .Prev }}{{ $title := .Prev.Title }}
+    <span class="prev">&lt;&lt;&nbsp;<a href="{{ .Prev.Permalink }}">{{ $title }}</a></span>{{ end }}
+    {{ if .Next }}{{ $title := .Next.Title }}
+    <span class="next"><a href="{{ .Next.Permalink }}">{{ $title }}</a>&nbsp;&gt;&gt;</span>{{ end }}
+  </nav>
 {{ partial "footer" . }}

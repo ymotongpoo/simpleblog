@@ -9,15 +9,6 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $base-font-color;
-
-    a {
-        color: inherit;
-        text-decoration: none;
-
-        &:hover {
-            color: $anker-color;
-        }
-    }
 }
 
 pre, code, var, samp, kbd {
@@ -58,13 +49,33 @@ span.timestamp::after {
     margin: $entry-meta-margin;
 }
 
-span.tag:not(:last-child)::after {
-    content: $tag-pseudo;
+span.tag {
+    &:not(:last-child)::after {
+        content: $tag-pseudo;
+    }
+
+    a {
+        color: $divider-color;
+
+        &:hover {
+            color: $anker-color;
+            text-decoration: none;
+        }
+    }
 }
 
 main {
     max-width: $main-width;
     margin: auto;
+
+    a {
+        color: $anker-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 main#index {
@@ -105,6 +116,29 @@ main#list {
     .list-meta {
         color: $entry-meta-font-color;
         margin-bottom: $base-margin;
+    }
+}
+
+nav {
+    max-width: $main-width;
+    margin: auto;
+    color: $nav-font-color;
+    span.prev {
+        max-width: $nav-span-width;
+        float: left;
+    }
+    span.next {
+        max-width: $nav-span-width;
+        float: right;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: $anker-color;
+        }
     }
 }
 
