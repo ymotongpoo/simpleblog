@@ -36,8 +36,8 @@
   <meta name="twitter:image" content="{{ .Site.Params.siteImage }}" />
   {{ end }}
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/monokai-sublime.css">
+  <link rel="stylesheet" href='{{ "/css/main.css" | relURL }}'>
+  <link rel="stylesheet" href='{{ "/css/monokai-sublime.css" | relURL }}'>
 
   <title>{{ .Title }} | {{ .Site.Title }} </title>
 </head>
@@ -49,10 +49,10 @@
         <span><a href="https://twitter.com/{{ . }}/">Twitter</a></span>
       {{ end }}
       {{ with .Site.Params.github }}
-        <span><a href="https://github.com/{{ . }}">Facebook</a></span>
+        <span><a href="https://github.com/{{ . }}">GitHub</a></span>
       {{ end }}
       {{ with .Site.Params.facebook }}
-        <span><a href="https://facebook.com/{{ . }}">GitHub</a></span>
+        <span><a href="https://facebook.com/{{ . }}">Facebook</a></span>
       {{ end }}
     </div>
     

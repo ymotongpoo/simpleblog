@@ -4,8 +4,9 @@
       <h1>{{ .Title }}</h1>
       <div class="entry-meta">
         <span class="timestamp"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
-        {{ range .Params.tags }}
-        <span class="tag"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span>
+        {{ range $index, $tag := .Params.tags }}
+        {{ $path := $tag | printf "%s%s" "/tags/" | urlize | relURL }}
+        <span class="tag"><a href='{{ $path }}'>#{{ $tag }}</a></span>
         {{ end }}
       </div>
       {{ .Content }}
