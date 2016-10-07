@@ -37,6 +37,21 @@ header {
             text-decoration: none;
         }
     }
+
+    #social {
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span:not(:last-child)::after {
+            content: " | "
+        }
+    }
 }
 
 footer {

@@ -1,0 +1,12 @@
+baseurl = "https://www.example.com"
+languageCode = "ja-jp"
+title = "My Awesome Site"
+paginate = 20
+copyright = "John Doe, all rights reserved."
+description = "Velit anim fugiat occaecat duis voluptate adipisicing esse qui excepteur."
+
+[Params]
+twitter = "johndoe"
+facebook = "johndoe"
+github = "johndoe"
+ga = "UA-XXXXXXX-YY"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="{{ .Site.LanguageCode }}">
 
 <head>
   <!-- Open Graph -->
@@ -38,14 +38,24 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/monokai-sublime.css">
-  <script src="/js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 
   <title>{{ .Title }} | {{ .Site.Title }} </title>
 </head>
 
 <body>
   <header>
+    <div id="social">
+      {{ with .Site.Params.twitter }}
+        <span><a href="https://twitter.com/{{ . }}/">Twitter</a></span>
+      {{ end }}
+      {{ with .Site.Params.github }}
+        <span><a href="https://github.com/{{ . }}">Facebook</a></span>
+      {{ end }}
+      {{ with .Site.Params.facebook }}
+        <span><a href="https://facebook.com/{{ . }}">GitHub</a></span>
+      {{ end }}
+    </div>
+    
     <div id="branding">
       <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
       <h2>{{ .Site.Params.description }}</h2>

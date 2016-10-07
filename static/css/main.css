@@ -30,6 +30,13 @@ header {
     header #branding a {
       color: inherit;
       text-decoration: none; }
+  header #social a {
+    color: inherit;
+    text-decoration: none; }
+    header #social a:hover {
+      text-decoration: underline; }
+  header #social span:not(:last-child)::after {
+    content: " | "; }
 
 footer {
   max-width: 900px;
