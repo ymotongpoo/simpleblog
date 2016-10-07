@@ -93,6 +93,10 @@ nav {
   max-width: 900px;
   margin: auto;
   color: #bdbdbd; }
+  nav:after {
+    content: "";
+    display: block;
+    clear: both; }
   nav span.prev {
     max-width: 300px;
     float: left; }

@@ -138,6 +138,11 @@ nav {
     max-width: $main-width;
     margin: auto;
     color: $nav-font-color;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
     span.prev {
         max-width: $nav-span-width;
         float: left;
@@ -146,7 +151,6 @@ nav {
         max-width: $nav-span-width;
         float: right;
     }
-
     a {
         color: inherit;
         text-decoration: none;
