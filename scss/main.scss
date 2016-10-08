@@ -159,6 +159,11 @@ nav {
             color: $anker-color;
         }
     }
+    ul.pagination {
+        li {
+            display: inline;
+        }
+    }
 }
 
 .copyright {

@@ -108,6 +108,8 @@ nav {
     text-decoration: none; }
     nav a:hover {
       color: #00bcd4; }
+  nav ul.pagination li {
+    display: inline; }
 
 .copyright {
   color: #bdbdbd;

@@ -1,6 +1,7 @@
 {{ partial "header" . }}
   <main id="list">
-    {{ range .Data.Pages.ByPublishDate }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
     <div class="list-summary">
       <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       <div class="list-meta">
