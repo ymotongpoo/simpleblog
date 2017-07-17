@@ -14,4 +14,9 @@
     </div>
     {{ end }}
   </main>
+
+  <nav>
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ template "_internal/pagination.html" . }}
+  </nav>
 {{ partial "footer" . }}
